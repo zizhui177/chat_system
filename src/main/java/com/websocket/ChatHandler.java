@@ -31,7 +31,7 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
        String content = textWebSocketFrame.text();
         System.out.println("接收的数据"+content);
         for(Channel channel:clients){
-             channel.writeAndFlush(new TextWebSocketFrame("服务器在 "+ LocalDateTime.now())+"接收到的消息为："+content);
+             channel.writeAndFlush(new TextWebSocketFrame("服务器在 "+ LocalDateTime.now()+"接收到的消息为："+content));
 
         }
     }
